@@ -30,9 +30,9 @@ bmp280 = BMP280(i2c_dev=bus)
 # Végtelen ciklus 10 másodperces időközönként
 while True:
     
-    # Véletlenszerű hőmérséklet és páratartalom generálása
-    #temperature = round(random.uniform(20.0, 30.0), 2)  # Példa: 20-30°C között
-    #humidity = round(random.uniform(30.0, 70.0), 2)     # Példa: 30-70% között
+    # Véletlenszerű hőmérséklet és nyomás generálása
+    #temperature = round(random.uniform(15.0, 25.0), 2)  # Példa: 15-25°C között
+    #pressure = round(random.uniform(1000.0, 1010.0), 2)     # Példa: 1000-1015 között
 
     #SMB280 sensor adatainak bekérése
     temperature = bmp280.get_temperature()
