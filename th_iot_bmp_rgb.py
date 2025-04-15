@@ -14,12 +14,12 @@ red_led = PWMLED(21)    # Piros LED a GPIO 21 pinhez
 API_KEY = 'HX1HIJ1Y9Q6CMGTV'
 
 # Adatok küldése a ThingSpeak-re
-def send_data_to_thingspeak(temp, humidity):
+def send_data_to_thingspeak(temp, pressure):
     url = f'https://api.thingspeak.com/update?api_key={API_KEY}&field1={temp}&field2={pressure}'
     response = requests.get(url)
     
     if response.status_code == 200:
-        print(f"Sikeres adatküldés: Hőmérséklet={temp}, Légnyomás={humidity}")
+        print(f"Sikeres adatküldés: Hőmérséklet={temp}, Légnyomás={pressure}")
     else:
         print(f"Sikertelen adatküldés: {response.status_code}")
 
